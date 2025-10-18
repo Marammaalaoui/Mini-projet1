@@ -1,35 +1,58 @@
-/* style.css - Styles pour le portfolio */
-
-/* Style général du corps de la page */
+/* Amélioration Globale et Utilisation de Box-Sizing */
+*, *::before, *::after {
+    box-sizing: border-box; /* Facilite la gestion des padding et border */
+}
 body {
-    font-family: Arial, sans-serif; /* Police de caractères simple */
-    background-color: #f4f4f4; /* Fond gris clair */
-    color: #333; /* Texte gris foncé */
+    font-family: 'Roboto',Arial, sans-serif; 
+    background-color: #f4f4f4; 
+    color: #333; 
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
-/* Conteneur principal pour centrer le contenu */
+
 header, nav, main, footer {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    padding-left: 15px; 
+    padding-right: 15px;
+}
+@media (max-width: 500px) {
+    nav a {
+        /* Permet aux liens de prendre toute la largeur sur les mobiles */
+        display: block; 
+        padding: 10px 0;
+        border-bottom: 1px solid #555; /* Séparateur pour les liens */
+    }
+    
+    header h1 {
+        font-size: 1.8em; /* Réduit la taille du titre sur mobile */
+    }
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    border: 5px solid #007BFF; 
+    object-fit: cover; 
+    margin-bottom: 10px; 
 }
 
-/* Style de l'en-tête */
 header {
     background-color: #333;
     color: #fff;
     text-align: center;
     border-bottom: 4px solid #007BFF;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
 }
 
-header h1 {
-    margin: 0;
-}
 
-/* Barre de navigation */
+
 nav {
     background-color: #444;
     text-align: center;
@@ -40,30 +63,44 @@ nav a {
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
+    transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-    background-color: #007BFF;
-}
 
-/* Sections principales */
+
+
 section {
     background: #fff;
-    margin-bottom: 20px; /* Espace entre les sections */
+    margin-bottom: 20px; 
     padding: 20px;
-    border-radius: 5px; /* Coins arrondis */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 h2 {
-    color: #007BFF; /* Titres de section en bleu */
+    color: #007BFF;
 }
 
-/* Liste de compétences */
-ul {
-    list-style-type: square; /* Style des puces */
+
+#competences ul {
+    list-style-type: none; /* Enlève les puces */
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permet aux tags de passer à la ligne */
+}
+#competences li {
+    background-color: #e0f7ff; /* Fond bleu très clair */
+    color: #007BFF;
+    padding: 5px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px; /* Bords très arrondis (forme de pillule) */
+    font-size: 0.9em;
+    font-weight: bold;
+    border: 1px solid #007BFF;
 }
 
-/* Pied de page */
+
 footer {
     text-align: center;
     font-size: 0.9em;
