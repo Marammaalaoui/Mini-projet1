@@ -1,0 +1,71 @@
+/* style.css - Styles pour le portfolio */
+
+/* Style général du corps de la page */
+body {
+    font-family: Arial, sans-serif; /* Police de caractères simple */
+    background-color: #f4f4f4; /* Fond gris clair */
+    color: #333; /* Texte gris foncé */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal pour centrer le contenu */
+header, nav, main, footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style de l'en-tête */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-bottom: 4px solid #007BFF;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Barre de navigation */
+nav {
+    background-color: #444;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    background-color: #007BFF;
+}
+
+/* Sections principales */
+section {
+    background: #fff;
+    margin-bottom: 20px; /* Espace entre les sections */
+    padding: 20px;
+    border-radius: 5px; /* Coins arrondis */
+}
+
+h2 {
+    color: #007BFF; /* Titres de section en bleu */
+}
+
+/* Liste de compétences */
+ul {
+    list-style-type: square; /* Style des puces */
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+}
